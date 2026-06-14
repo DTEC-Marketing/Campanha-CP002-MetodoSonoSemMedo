@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Suíte Restrita de Mini-Apps • Método Sono Sem Medo</title>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16465421157"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'AW-16465421157');
+  </script>
+
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '2094248848034102');
+    fbq('track', 'PageView');
+  </script>
+  <!-- End Meta Pixel Code -->
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    .font-display {
+      font-family: 'Space Grotesk', sans-serif;
+    }
+    /* Custom Scrollbar for dark theme */
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #030611;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #ea580c33;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #f9731666;
+    }
+  </style>
+</head>
+<body class="bg-[#030611] text-slate-100 min-h-screen flex flex-col justify-between selection:bg-amber-500 selection:text-slate-950">
+  <!-- Meta Pixel noscript fallback -->
+  <noscript>
+    <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=2094248848034102&ev=PageView&noscript=1"/>
+  </noscript>
+
+  <!-- MEMBERS AREA WELCOME / LOCK SCREEN -->
+  <div id="unlock-screen" class="fixed inset-0 z-50 bg-[#030611] flex flex-col items-center justify-center p-6 text-center">
+    <!-- Star glow effect -->
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-md w-full bg-[#070b1e] border border-amber-500/20 rounded-3xl p-8 relative overflow-hidden shadow-2xl">
+      <!-- Badge icon inside box -->
+      <div class="w-16 h-16 bg-amber-500/10 border border-amber-500/30 text-amber-500 rounded-full flex items-center justify-center mx-auto mb-6">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+        </svg>
+      </div>
+
+      <span class="text-xs font-mono tracking-widest text-amber-500 uppercase font-black px-2.5 py-1 bg-amber-500/10 rounded-full">
+        CONTEÚDO EXCLUSIVO DE COMPRA
+      </span>
+
+      <h1 class="text-2xl font-display font-extrabold text-white tracking-tight mt-4 mb-2">
+        Suíte Sono Sem Medo
+      </h1>
+      
+      <p class="text-xs text-slate-400 leading-relaxed mb-6 font-sans">
+        Parabéns pela sua conquista! Este é o seu espaço protegido e funcional com os 3 mini-aplicativos prontos para guiar as noites do seu filho de forma lúdica.
+      </p>
+
+      <div class="space-y-4 text-left mb-6 font-sans">
+        <div class="flex items-start gap-2.5 text-xs">
+          <svg class="w-4 h-4 text-amber-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          <span class="text-slate-300"><b>Acesso Vitalício</b> garantido no seu e-mail de compra.</span>
+        </div>
+        <div class="flex items-start gap-2.5 text-xs">
+          <svg class="w-4 h-4 text-amber-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          <span class="text-slate-300"><b>Agenda Salva Automática</b>: Seu progresso é guardado localmente e nunca é perdido.</span>
+        </div>
+      </div>
+
+      <button onclick="unlockSuite()" class="w-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-500 text-slate-950 font-bold py-3.5 px-6 rounded-xl text-center shadow-lg shadow-amber-500/10 cursor-pointer block text-sm transition font-sans uppercase tracking-wide">
+        Entrar na Área de Mini-Apps
+      </button>
+    </div>
+  </div>
+
+  <!-- APP SUITE INTERFACE (Hidden initially, active after unlock) -->
+  <div id="main-suite-container" class="hidden flex-1 flex flex-col relative">
+    
+    <!-- Header -->
+    <header class="border-b border-white/5 bg-[#050817]/80 backdrop-blur-md sticky top-0 z-40">
+      <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+        
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 bg-amber-500/10 border border-amber-500/25 rounded-xl flex items-center justify-center text-amber-400">
+            <svg class="w-6 h-6 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m12.728 12.728l.707-.707M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <div>
+            <h1 class="text-base font-display font-black text-white tracking-tight">SONO SEM MEDO</h1>
+            <span class="text-[10px] font-mono text-amber-500 uppercase font-bold tracking-widest block -mt-1.5">Área Reservada do Aluno</span>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-3 text-xs">
+          <!-- Status indicator -->
+          <div class="hidden sm:flex items-center gap-1.5 px-2.5 py-1.5 bg-emerald-500/10 border border-emerald-500/20 rounded-full text-emerald-400 font-medium select-none">
+            <span class="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-ping"></span>
+            <span>Autosalve Ativado</span>
+          </div>
+
+          <button onclick="lockSuite()" class="text-slate-400 hover:text-white transition px-2 py-1">
+            Sair
+          </button>
+        </div>
+
+      </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="flex-1 max-w-6xl w-full mx-auto px-4 py-8 md:py-12">
+      
+      <!-- Interactive Grid Box -->
+      <div class="w-full bg-[#070b1e] border border-amber-500/20 rounded-3xl p-6 md:p-8 relative overflow-hidden shadow-xl select-none">
+        
+        <!-- Background radial glow -->
+        <div class="absolute -top-10 -right-10 w-48 h-48 bg-amber-500/5 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute -bottom-10 -left-10 w-48 h-48 bg-indigo-500/5 rounded-full blur-3xl pointer-events-none"></div>
+
+        <!-- Title -->
+        <div class="flex flex-col items-center text-center mb-8">
+          <span class="text-xs uppercase font-mono text-amber-500 tracking-widest font-bold px-3 py-1 bg-amber-500/10 border border-amber-500/20 rounded-full mb-3 flex items-center gap-1.5 align-middle">
+            <svg class="w-3.5 h-3.5 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
+            <span>Suíte de Aplicativos do Aluno</span>
+          </span>
+          <h3 class="text-2xl md:text-3xl font-display text-white font-extrabold tracking-tight">
+            Ferramentas Práticas de Apoio
+          </h3>
+          <p class="text-slate-400 text-xs md:text-sm max-w-xl leading-relaxed mt-2 font-sans">
+            Use as ferramentas abaixo no dia a dia para acelerar o processo, rastrear os gatilhos, isolar o perturbador exterior e persistir na jornada das 3 semanas.
+          </p>
+        </div>
+
+        <!-- Tabs navigation -->
+        <div class="grid grid-cols-3 gap-1 bg-slate-950/60 p-1.5 rounded-2xl border border-[#ffffff0a] mb-8 text-center text-xs md:text-sm font-sans font-semibold">
+          <button id="tab-tracker-btn" onclick="switchTab('tracker')" class="flex flex-col md:flex-row items-center justify-center gap-1.5 px-3 py-3 rounded-xl transition-all cursor-pointer bg-amber-500 text-slate-950 font-bold shadow-lg">
+            <svg class="w-4 h-4 text-current" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+            <span>Rastreador de Gatilhos</span>
+          </button>
+          <button id="tab-audio-btn" onclick="switchTab('audio')" class="flex flex-col md:flex-row items-center justify-center gap-1.5 px-3 py-3 rounded-xl transition-all cursor-pointer text-slate-400 hover:text-white hover:bg-slate-900/40">
+            <svg class="w-4 h-4 text-current" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"/></svg>
+            <span>Máquina de Ruídos</span>
+          </button>
+          <button id="tab-ritual-btn" onclick="switchTab('ritual')" class="flex flex-col md:flex-row items-center justify-center gap-1.5 px-3 py-3 rounded-xl transition-all cursor-pointer text-slate-400 hover:text-white hover:bg-slate-900/40">
+            <svg class="w-4 h-4 text-current" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+            <span>Agenda 21 Dias</span>
+          </button>
+        </div>
+
+        <!-- Tab Contents Wrapper -->
+        <div class="min-h-[360px] flex flex-col justify-between">
+          
+          <!-- TAB 1: SMART TRACKER DIARY -->
+          <div id="tab-tracker" class="grid md:grid-cols-12 gap-6 items-start font-sans">
+            <!-- Left settings -->
+            <div class="md:col-span-6 space-y-4">
+              <span class="text-xs font-mono uppercase font-bold text-slate-400 tracking-wider flex items-center gap-1.5">
+                <svg class="w-3.5 h-3.5 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+                Módulo de Rastreamento de Gatilhos
+              </span>
+
+              <div class="space-y-3.5 bg-slate-950/40 p-4 rounded-xl border border-[#ffffff05]">
+                <p class="text-xs text-slate-400 leading-normal">
+                  Selecione o comportamento da criança nas últimas 12 horas para que o mini-app calcule o nível de agitação neurológica:
+                </p>
+
+                <div class="space-y-2.5 bg-slate-900/15 p-1 rounded-lg">
+                  <label class="flex items-center gap-3 text-xs md:text-sm text-slate-200 cursor-pointer hover:text-white select-none">
+                    <input type="checkbox" id="track-screens" onchange="updateTrackerAnalysis()" class="rounded border-slate-700 bg-slate-900 text-amber-500 focus:ring-amber-500 w-4 h-4">
+                    <span>Celulares, TV ou Telas nas últimas 2 horas?</span>
+                  </label>
+                  <label class="flex items-center gap-3 text-xs md:text-sm text-slate-200 cursor-pointer hover:text-white select-none">
+                    <input type="checkbox" id="track-late" onchange="updateTrackerAnalysis()" class="rounded border-slate-700 bg-slate-900 text-amber-500 focus:ring-amber-500 w-4 h-4">
+                    <span>Passou do horário regular de dormir?</span>
+                  </label>
+                  <label class="flex items-center gap-3 text-xs md:text-sm text-slate-200 cursor-pointer hover:text-white select-none">
+                    <input type="checkbox" id="track-activity" onchange="updateTrackerAnalysis()" class="rounded border-slate-700 bg-slate-900 text-amber-500 focus:ring-amber-500 w-4 h-4">
+                    <span>Festa ou brincadeiras muito intensas antes da janta?</span>
+                  </label>
+                  <label class="flex items-center gap-3 text-xs md:text-sm text-slate-200 cursor-pointer hover:text-white select-none">
+                    <input type="checkbox" id="track-stress" onchange="updateTrackerAnalysis()" class="rounded border-slate-700 bg-slate-900 text-amber-500 focus:ring-amber-500 w-4 h-4">
+                    <span>Estresse na escola, início de aulas ou dentes nascendo?</span>
+                  </label>
+                </div>
+
+                <div class="pt-2 border-t border-slate-900">
+                  <span class="text-xs text-slate-400 block mb-1.5 font-semibold">Agitação corporal visível agora:</span>
+                  <div class="grid grid-cols-3 gap-2">
+                    <button id="track-level-low" onclick="setTrackerAgitation('low')" class="py-1 px-2.5 rounded-lg text-xs font-bold capitalize transition-all border bg-amber-500/20 text-amber-400 border-amber-500/55 text-amber-400">Calmo</button>
+                    <button id="track-level-medium" onclick="setTrackerAgitation('medium')" class="py-1 px-2.5 rounded-lg text-xs font-bold capitalize transition-all border bg-slate-900 text-slate-400 border-slate-800">Inquieto</button>
+                    <button id="track-level-high" onclick="setTrackerAgitation('high')" class="py-1 px-2.5 rounded-lg text-xs font-bold capitalize transition-all border bg-slate-900 text-slate-400 border-slate-800">Muito Elétrico</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Recommendation card -->
+            <div class="md:col-span-6 bg-slate-950/60 border border-[#ffffff0a] p-5 rounded-2xl flex flex-col justify-between min-h-[300px]">
+              <div>
+                <div class="flex items-center justify-between mb-4">
+                  <span class="text-xs font-semibold text-slate-300">Análise Neurofisiológica Real</span>
+                  <span id="tracker-risk-badge" class="text-[10px] font-extrabold uppercase px-2.5 py-0.5 rounded-full border border-emerald-500/20 bg-emerald-500/10 text-emerald-400">
+                    Rito Indicado: Baixo
+                  </span>
+                </div>
+
+                <div class="space-y-4">
+                  <p id="tracker-advice-text" class="text-xs md:text-sm text-slate-300 leading-relaxed font-sans italic bg-slate-900/50 p-3.5 rounded-xl border-l-2 border-amber-400">
+                    "Com base na rotina atual, o sistema nervoso está equilibrado para o sono profundo. Recomendamos manter o rito padrão de 4 minutos."
+                  </p>
+
+                  <div>
+                    <span class="text-xs font-bold text-slate-400 block mb-2">Plano de Co-regulação Recomendado:</span>
+                    <ul id="tracker-plan-list" class="space-y-2 text-xs text-slate-200">
+                      <!-- Rendered dynamically -->
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-6 pt-4 border-t border-[#ffffff05] flex items-center gap-2 text-[10px] text-slate-500">
+                <svg class="w-3.5 h-3.5 text-indigo-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                <span>Este painel auxilia o equilíbrio diário familiar sob as orientações lúdicas do e-book oficial.</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- TAB 2: AMBIENT SOUND GENERATOR -->
+          <div id="tab-audio" class="hidden grid md:grid-cols-12 gap-6 items-center font-sans">
+            <!-- Audio explanation -->
+            <div class="md:col-span-6 space-y-4">
+              <span class="text-xs font-mono uppercase font-bold text-slate-400 tracking-wider flex items-center gap-1.5">
+                <svg class="w-3.5 h-3.5 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"/></svg>
+                Gerador Som de Conforto In-App
+              </span>
+              
+              <h4 class="text-lg font-bold text-white leading-snug">
+                Isole Barulhos Súbitos da Casa de Maneira Natural
+              </h4>
+              
+              <p class="text-xs md:text-sm text-slate-400 leading-relaxed">
+                Nossos ruídos utilizam frequências orgânicas e escuras (Brownian e Pink). O processamento mental foca na estática amortecida, o que silencia ruídos de vizinhos, carros ou TV, mantendo o bebê na fase do sono profundo.
+              </p>
+
+              <div class="grid grid-cols-3 gap-2">
+                <button id="sound-btn-brown" onclick="setAudioType('brown')" class="py-2 px-3 rounded-xl text-xs font-bold transition-all border bg-amber-500/20 text-amber-400 border-amber-500 flex flex-col items-center gap-1">
+                  <span>☁️ Ruído Marrom</span>
+                  <span class="text-[9px] opacity-60 font-semibold font-sans uppercase">Protetor</span>
+                </button>
+                <button id="sound-btn-rain" onclick="setAudioType('rain')" class="py-2 px-3 rounded-xl text-xs font-bold transition-all border bg-slate-950 text-slate-400 border-slate-900 hover:border-slate-800 flex flex-col items-center gap-1">
+                  <span>🌧️ Chuva Leve</span>
+                  <span class="text-[9px] opacity-60 font-semibold font-sans uppercase">Rítmica</span>
+                </button>
+                <button id="sound-btn-lullaby" onclick="setAudioType('lullaby')" class="py-2 px-3 rounded-xl text-xs font-bold transition-all border bg-slate-950 text-slate-400 border-slate-900 hover:border-slate-800 flex flex-col items-center gap-1">
+                  <span>🎶 Chime Estrela</span>
+                  <span class="text-[9px] opacity-60 font-semibold font-sans uppercase">Sintonia</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Sound visualizer controls -->
+            <div class="md:col-span-6 bg-slate-950/80 border border-[#ffffff0a] rounded-2xl p-6 flex flex-col items-center justify-center relative min-h-[260px]">
+              
+              <!-- Visual waves effect if playing -->
+              <div class="flex gap-1.5 h-12 items-end justify-center mb-6 select-none" id="waves-container">
+                <div class="w-1 h-3 rounded-full bg-slate-800 transition-all duration-300"></div>
+                <div class="w-1 h-2 rounded-full bg-slate-800 transition-all duration-300"></div>
+                <div class="w-1 h-4 rounded-full bg-slate-800 transition-all duration-300"></div>
+                <div class="w-1 h-3 rounded-full bg-slate-800 transition-all duration-300"></div>
+                <div class="w-1 h-2 rounded-full bg-slate-800 transition-all duration-300"></div>
+                <div class="w-1 h-5 rounded-full bg-slate-800 transition-all duration-300"></div>
+                <div class="w-1 h-1.5 rounded-full bg-slate-800 transition-all duration-300"></div>
+                <div class="w-1 h-3.5 rounded-full bg-slate-800 transition-all duration-300"></div>
+                <div class="w-1 h-2 rounded-full bg-slate-800 transition-all duration-300"></div>
+                <div class="w-1 h-4 rounded-full bg-slate-800 transition-all duration-300"></div>
+              </div>
+
+              <!-- Main Action Buttons -->
+              <button id="audio-play-btn" onclick="toggleAmbientAudios()" class="w-28 h-28 rounded-full flex flex-col items-center justify-center cursor-pointer transition-all border bg-amber-500 border-amber-300 text-slate-950 hover:bg-amber-600 shadow-xl">
+                <svg class="w-8 h-8 text-slate-950 fill-current mb-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 3l14 9-14 9V3z"/></svg>
+                <span class="text-[9px] uppercase font-black text-slate-950 font-mono tracking-wider">Tocar Áudio</span>
+              </button>
+
+              <div class="w-full mt-6 space-y-2">
+                <div class="flex justify-between text-xs text-slate-500 font-sans tracking-tight">
+                  <span>Controle de Volume</span>
+                  <span id="volume-text" class="font-mono text-slate-400">60%</span>
+                </div>
+                <input type="range" id="volume-slider" min="5" max="100" value="60" oninput="updateSoundVolume(this.value)" disabled class="w-full h-1 bg-slate-900 rounded-lg appearance-none cursor-pointer accent-amber-500 disabled:opacity-40">
+              </div>
+
+            </div>
+          </div>
+
+          <!-- TAB 3: 21-DAY DIGITAL RITUAL GRID -->
+          <div id="tab-ritual" class="hidden grid md:grid-cols-12 gap-6 items-start font-sans">
+            <!-- Guide/Streak info -->
+            <div class="md:col-span-5 space-y-4">
+              <span class="text-xs font-mono uppercase font-bold text-slate-400 tracking-wider flex items-center gap-1.5">
+                <svg class="w-3.5 h-3.5 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                Monitor do Ritual diário e Conquistas
+              </span>
+
+              <div class="bg-slate-950/40 p-4 border border-[#ffffff05] rounded-xl text-center md:text-left">
+                <div class="flex items-center justify-center md:justify-start gap-4 mb-3">
+                  <div id="grid-counter" class="w-14 h-14 bg-amber-500/10 border border-amber-500/20 text-amber-400 rounded-full flex items-center justify-center font-display font-black text-3xl">
+                    8
+                  </div>
+                  <div>
+                    <h5 class="text-sm font-bold text-slate-200">Noites de Sucesso</h5>
+                    <p class="text-xs text-slate-400">Objetivo Técnico: 21 Noites</p>
+                  </div>
+                </div>
+
+                <p class="text-xs text-slate-400 leading-relaxed mb-4">
+                  Clique nas células para registrar cada dia concluído do método. Seu diário salva automaticamente a cada toque no banco de dados local.
+                </p>
+
+                <div class="space-y-1.5 text-left">
+                  <label class="text-[10px] text-zinc-500 block uppercase font-mono tracking-wider font-semibold">Minhas Anotações de Progresso:</label>
+                  <textarea id="ritual-notes" oninput="saveNotesState(this.value)" placeholder="Digite aqui ex: 'Noite super calmo, acordou zero vezes hoje...'" class="w-full text-xs bg-slate-950 border border-slate-900 rounded-lg p-2.5 text-slate-200 focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500" rows="3"></textarea>
+                </div>
+              </div>
+            </div>
+
+            <!-- 21 Grid cells -->
+            <div class="md:col-span-7 bg-slate-950/40 border border-[#ffffff0a] p-4 rounded-xl">
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-xs font-bold text-slate-300 font-sans">Quadro dos 21 Dias de Evolução</span>
+                <button onclick="resetRitualGrid()" class="text-[10px] text-zinc-500 hover:text-amber-500 hover:underline font-semibold transition">Resetar Tudo</button>
+              </div>
+
+              <div id="days-grid" class="grid grid-cols-7 gap-2">
+                <!-- Day buttons populated dynamically via JS -->
+              </div>
+
+              <!-- Grid legend -->
+              <div class="flex items-center justify-between text-[10px] text-slate-500 mt-5 select-none pt-2 border-t border-white/5">
+                <div class="flex items-center gap-1.5">
+                  <span class="w-2.5 h-2.5 bg-indigo-500/10 border border-indigo-500/20 rounded"></span>
+                  <span>Semana 1 (Corpo)</span>
+                </div>
+                <div class="flex items-center gap-1.5">
+                  <span class="w-2.5 h-2.5 bg-sky-500/10 border border-sky-500/20 rounded"></span>
+                  <span>Semana 2 (Mente)</span>
+                </div>
+                <div class="flex items-center gap-1.5">
+                  <span class="w-2.5 h-2.5 bg-amber-500/10 border border-amber-500/20 rounded"></span>
+                  <span>Semana 3 (Segurança)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/5 py-4 bg-slate-950/45 text-center text-[10px] text-slate-600">
+      <div class="max-w-6xl mx-auto px-4">
+        <span>© Método Sono Sem Medo • Todos os direitos reservados. Este mini-app destina-se a fins educativos e suporte de rotina de sono do e-book.</span>
+      </div>
+    </footer>
+
+  </div>
+
+  <script>
+    // ------------------ STANDALONE ACCESSIBILITY STATE ------------------
+    const SECURE_STORAGE_KEY_LOCKED = 'sono_sem_medo_suite_unlocked';
+    const SECURE_STORAGE_KEY_DAYS = 'sono_sem_medo_suite_days';
+    const SECURE_STORAGE_KEY_NOTES = 'sono_sem_medo_suite_notes';
+
+    function unlockSuite() {
+      // Transition display
+      document.getElementById('unlock-screen').classList.add('hidden');
+      document.getElementById('main-suite-container').classList.remove('hidden');
+      localStorage.setItem(SECURE_STORAGE_KEY_LOCKED, 'true');
+      
+      // Initialize core state
+      initSuiteState();
+    }
+
+    function lockSuite() {
+      localStorage.removeItem(SECURE_STORAGE_KEY_LOCKED);
+      stopAmbientSound();
+      window.location.href = "/";
+    }
+
+    // Auto load state if already unlocked before
+    window.addEventListener('DOMContentLoaded', () => {
+      const isUnlocked = localStorage.getItem(SECURE_STORAGE_KEY_LOCKED);
+      if (isUnlocked === 'true') {
+        document.getElementById('unlock-screen').classList.add('hidden');
+        document.getElementById('main-suite-container').classList.remove('hidden');
+        initSuiteState();
+      }
+    });
+
+    // ------------------ CORE INTERNAL PROCESS STATE ------------------
+    let activeTab = 'tracker';
+    let trackerAgitation = 'low';
+    let audioType = 'brown';
+    let isAudioPlaying = false;
+    let audioCtx = null;
+    let gainNode = null;
+    let sourceNode = null;
+    let volume = 60;
+    
+    // Default initial data populated
+    let completedDays = [1, 2, 3, 4, 5, 6, 7, 8];
+    let defaultNotes = "Semanas Iniciais Concluídas! O sono do Pedrinho já começou a responder muito bem.";
+
+    function initSuiteState() {
+      // 1. Load data from real LocalStorage
+      const savedDays = localStorage.getItem(SECURE_STORAGE_KEY_DAYS);
+      if (savedDays) {
+        completedDays = JSON.parse(savedDays);
+      } else {
+        localStorage.setItem(SECURE_STORAGE_KEY_DAYS, JSON.stringify(completedDays));
+      }
+
+      const savedNotes = localStorage.getItem(SECURE_STORAGE_KEY_NOTES);
+      if (savedNotes !== null) {
+        document.getElementById('ritual-notes').value = savedNotes;
+      } else {
+        document.getElementById('ritual-notes').value = defaultNotes;
+        localStorage.setItem(SECURE_STORAGE_KEY_NOTES, defaultNotes);
+      }
+
+      // Render elements
+      updateTrackerAnalysis();
+      renderDaysGrid();
+    }
+
+    // Swapping Tabs
+    window.switchTab = function(tab) {
+      activeTab = tab;
+      
+      // Stop audio if moving away from audio tab to prevent residual sound issues
+      if (tab !== 'audio') {
+        stopAmbientSound();
+      }
+
+      // Update Tab Buttons UI
+      const tabs = ['tracker', 'audio', 'ritual'];
+      tabs.forEach(t => {
+        const btn = document.getElementById(`tab-${t}-btn`);
+        const item = document.getElementById(`tab-${t}`);
+        
+        if (t === tab) {
+          btn.className = "flex flex-col md:flex-row items-center justify-center gap-1.5 px-3 py-3 rounded-xl transition-all cursor-pointer bg-amber-500 text-slate-950 font-bold shadow-lg";
+          item.classList.remove('hidden');
+          item.classList.add('grid');
+        } else {
+          btn.className = "flex flex-col md:flex-row items-center justify-center gap-1.5 px-3 py-3 rounded-xl transition-all cursor-pointer text-slate-400 hover:text-white hover:bg-slate-900/40";
+          item.classList.add('hidden');
+          item.classList.remove('grid');
+        }
+      });
+    };
+
+    // --- TAB 1: TRACKER ---
+    window.setTrackerAgitation = function(level) {
+      trackerAgitation = level;
+      const levels = ['low', 'medium', 'high'];
+      levels.forEach(l => {
+        const btn = document.getElementById(`track-level-${l}`);
+        if (l === level) {
+          btn.className = "py-1 px-2.5 rounded-lg text-xs font-bold capitalize transition-all border bg-amber-500/20 text-amber-400 border-amber-500/55";
+        } else {
+          btn.className = "py-1 px-2.5 rounded-lg text-xs font-bold capitalize transition-all border bg-slate-900 text-slate-400 border-slate-800";
+        }
+      });
+      updateTrackerAnalysis();
+    };
+
+    window.updateTrackerAnalysis = function() {
+      const screens = document.getElementById('track-screens').checked;
+      const late = document.getElementById('track-late').checked;
+      const activity = document.getElementById('track-activity').checked;
+      const stress = document.getElementById('track-stress').checked;
+
+      let triggersCount = 0;
+      if (screens) triggersCount++;
+      if (late) triggersCount++;
+      if (activity) triggersCount++;
+      if (stress) triggersCount++;
+
+      let risk = 'Baixo';
+      let riskClass = 'border-emerald-500/20 bg-emerald-500/10 text-emerald-400';
+      let advice = '';
+      let plan = [];
+
+      if (trackerAgitation === 'high' || triggersCount >= 3) {
+        risk = 'Alto';
+        riskClass = 'border-rose-500/20 bg-rose-500/10 text-rose-400';
+        advice = "Alerta de Sobrecarga Sensorial: O cérebro infantil acumulou muitos eixos de ativação simpática hoje. Há uma grande chance de sobressaltos e agitações na transição para o sono profundo.";
+        plan = [
+          "⚠️ Proibir qualquer tela imediatamente.",
+          "⏱️ Iniciar a Respiração da Nuvem fofinha por pelo menos 5 minutos completo.",
+          "💤 Realizar o Coração Quentinho com co-respiração prolongada antes de apagar a última luz.",
+          "🕯️ Manter o quarto na penumbra absoluta sem barulhos extras."
+        ];
+      } else if (trackerAgitation === 'medium' || triggersCount >= 1) {
+        risk = 'Médio';
+        riskClass = 'border-amber-500/20 bg-amber-500/10 text-amber-400';
+        advice = "Equilíbrio em Risco: Alguns estímulos podem causar agitação leve e pequenos despertares de sobressalto.";
+        plan = [
+          "☁️ Aplicar a Respiração da Nuvem por 3 a 4 ciclos.",
+          "❤️ Garantir 2 minutos de massagem leve no peitinho ou costas.",
+          "📖 Contar uma pequena história lúdica do Guia oficial sobre relaxamento."
+        ];
+      } else {
+        risk = 'Baixo';
+        riskClass = 'border-emerald-500/20 bg-emerald-500/10 text-emerald-400';
+        advice = "Perfeito para Descanso: O corpo e a mente estão com baixo nível de alerta simpático. Excelente noite para restabelecer a segurança.";
+        plan = [
+          "🌌 Fazer o 'Escudo de Luz' tradicional para reconfirmar a segurança do quarto.",
+          "🌙 Deitar com confiança e abraço caloroso por 2 minutos.",
+          "💤 Deixar que adormeça naturalmente de forma autônoma."
+        ];
+      }
+
+      // Update UI
+      const badge = document.getElementById('tracker-risk-badge');
+      badge.textContent = `Rito Indicado: ${risk}`;
+      badge.className = `text-[10px] font-extrabold uppercase px-2.5 py-0.5 rounded-full border ${riskClass}`;
+
+      document.getElementById('tracker-advice-text').textContent = `"${advice}"`;
+
+      const listContainer = document.getElementById('tracker-plan-list');
+      listContainer.innerHTML = '';
+      plan.forEach(item => {
+        const li = document.createElement('li');
+        li.className = "flex items-start gap-2 text-xs text-slate-200 font-sans";
+        li.innerHTML = `<span class="text-amber-500 font-bold select-none">•</span><span>${item}</span>`;
+        listContainer.appendChild(li);
+      });
+    };
+
+    // --- TAB 2: AUDIOS ---
+    window.setAudioType = function(type) {
+      if (audioType === type) return;
+      audioType = type;
+      
+      const types = ['brown', 'rain', 'lullaby'];
+      types.forEach(t => {
+        const btn = document.getElementById(`sound-btn-${t}`);
+        if (t === type) {
+          btn.className = "py-2 px-3 rounded-xl text-xs font-bold transition-all border bg-amber-500/20 text-amber-400 border-amber-500 flex flex-col items-center gap-1";
+        } else {
+          btn.className = "py-2 px-3 rounded-xl text-xs font-bold transition-all border bg-slate-950 text-slate-400 border-slate-900 hover:border-slate-800 flex flex-col items-center gap-1";
+        }
+      });
+
+      if (isAudioPlaying) {
+        stopAmbientSound();
+        setTimeout(() => {
+          playAmbientSound();
+        }, 150);
+      }
+    };
+
+    window.toggleAmbientAudios = function() {
+      if (isAudioPlaying) {
+        stopAmbientSound();
+      } else {
+        playAmbientSound();
+      }
+    };
+
+    function playAmbientSound() {
+      try {
+        const AudioCtxClass = window.AudioContext || window.webkitAudioContext;
+        audioCtx = new AudioCtxClass();
+        gainNode = audioCtx.createGain();
+        gainNode.gain.setValueAtTime(volume / 100, audioCtx.currentTime);
+        gainNode.connect(audioCtx.destination);
+
+        if (audioType === 'brown') {
+          const bufferSize = 10 * audioCtx.sampleRate;
+          const noiseBuffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate);
+          const output = noiseBuffer.getChannelData(0);
+          let lastOut = 0.0;
+          for (let i = 0; i < bufferSize; i++) {
+            const white = Math.random() * 2 - 1;
+            output[i] = (lastOut + (0.02 * white)) / 1.02;
+            lastOut = output[i];
+            output[i] *= 3.5; // normalize
+          }
+          const bufferSource = audioCtx.createBufferSource();
+          bufferSource.buffer = noiseBuffer;
+          bufferSource.loop = true;
+          sourceNode = bufferSource;
+        } else if (audioType === 'rain') {
+          const bufferSize = 5 * audioCtx.sampleRate;
+          const noiseBuffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate);
+          const output = noiseBuffer.getChannelData(0);
+          let b0 = 0, b1 = 0, b2 = 0, b3 = 0, b4 = 0, b5 = 0, b6 = 0;
+          for (let i = 0; i < bufferSize; i++) {
+            const white = Math.random() * 2 - 1;
+            b0 = 0.99886 * b0 + white * 0.0555179;
+            b1 = 0.99332 * b1 + white * 0.0750759;
+            b2 = 0.96900 * b2 + white * 0.1538520;
+            b3 = 0.86650 * b3 + white * 0.3104856;
+            b4 = 0.55000 * b4 + white * 0.5329522;
+            b5 = -0.76160 * b5 - white * 0.0168980;
+            const pink = b0 + b1 + b2 + b3 + b4 + b5 + b6 + white * 0.5362;
+            b6 = white * 0.115926;
+            const crackle = Math.random() > 0.992 ? (Math.random() * 1.5) : 0;
+            output[i] = (pink * 0.12) + (crackle * 0.15);
+          }
+          const bufferSource = audioCtx.createBufferSource();
+          bufferSource.buffer = noiseBuffer;
+          bufferSource.loop = true;
+          sourceNode = bufferSource;
+        } else {
+          // Lullaby sine oscillations
+          const osc = audioCtx.createOscillator();
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(196.00, audioCtx.currentTime); // G3
+          sourceNode = osc;
+        }
+
+        sourceNode.connect(gainNode);
+        sourceNode.start();
+        isAudioPlaying = true;
+        
+        // Enable Slider
+        document.getElementById('volume-slider').removeAttribute('disabled');
+        
+        // Update Button Layout
+        const playBtn = document.getElementById('audio-play-btn');
+        playBtn.className = "w-28 h-28 rounded-full flex flex-col items-center justify-center cursor-pointer transition-all border bg-[#030611] border-amber-500/60 shadow-lg shadow-amber-500/5";
+        playBtn.innerHTML = `
+          <svg class="w-8 h-8 text-amber-500 fill-amber-500 mb-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="1"/></svg>
+          <span class="text-[9px] uppercase font-bold text-slate-400 font-mono tracking-wider">Silenciar</span>
+        `;
+
+        // Start waves physics bounce
+        animateWaves();
+
+      } catch (err) {
+        console.warn("AudioContext init error: ", err);
+        isAudioPlaying = true;
+        document.getElementById('volume-slider').removeAttribute('disabled');
+        const playBtn = document.getElementById('audio-play-btn');
+        playBtn.className = "w-28 h-28 rounded-full flex flex-col items-center justify-center cursor-pointer transition-all border bg-[#030611] border-amber-500/60 shadow-lg shadow-amber-500/5";
+        playBtn.innerHTML = `
+          <svg class="w-8 h-8 text-amber-500 fill-amber-500 mb-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="1"/></svg>
+          <span class="text-[9px] uppercase font-bold text-slate-400 font-mono tracking-wider">Silenciar</span>
+        `;
+        animateWaves();
+      }
+    }
+
+    function stopAmbientSound() {
+      if (sourceNode) {
+        try { sourceNode.stop(); } catch(e){}
+      }
+      if (audioCtx) {
+        try { audioCtx.close(); } catch(e){}
+      }
+      sourceNode = null;
+      audioCtx = null;
+      isAudioPlaying = false;
+
+      // Disable Slider
+      document.getElementById('volume-slider').setAttribute('disabled', 'true');
+
+      // Update Button
+      const playBtn = document.getElementById('audio-play-btn');
+      playBtn.className = "w-28 h-28 rounded-full flex flex-col items-center justify-center cursor-pointer transition-all border bg-amber-500 border-amber-300 text-slate-950 hover:bg-amber-600 shadow-xl";
+      playBtn.innerHTML = `
+        <svg class="w-8 h-8 text-slate-950 fill-current mb-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 3l14 9-14 9V3z"/></svg>
+        <span class="text-[9px] uppercase font-black text-slate-950 font-mono tracking-wider">Tocar Áudio</span>
+      `;
+
+      // Reset Waves heights
+      const children = document.getElementById('waves-container').children;
+      for (let i = 0; i < children.length; i++) {
+        children[i].style.height = '6px';
+        children[i].className = 'w-1 h-[6px] rounded-full bg-slate-800 transition-all duration-300';
+      }
+    }
+
+    window.updateSoundVolume = function(vol) {
+      volume = Number(vol);
+      document.getElementById('volume-text').textContent = `${vol}%`;
+      if (gainNode && audioCtx) {
+        try {
+          gainNode.gain.setValueAtTime(volume / 100, audioCtx.currentTime);
+        } catch(e){}
+      }
+    };
+
+    function animateWaves() {
+      if (!isAudioPlaying) return;
+      
+      const waves = document.getElementById('waves-container');
+      if (!waves) return;
+
+      const children = waves.children;
+      for (let i = 0; i < children.length; i++) {
+        const height = Math.floor(Math.random() * 40) + 10;
+        children[i].style.height = `${height}px`;
+        children[i].className = 'w-1 rounded-full bg-amber-500 transition-all duration-300';
+      }
+
+      setTimeout(() => {
+        requestAnimationFrame(animateWaves);
+      }, 200);
+    }
+
+    // --- TAB 3: 21-DAY AGENDA GRID ---
+    window.renderDaysGrid = function() {
+      const container = document.getElementById('days-grid');
+      container.innerHTML = '';
+
+      for (let dayNum = 1; dayNum <= 21; dayNum++) {
+        const isCompleted = completedDays.includes(dayNum);
+        
+        let weekBg = 'bg-indigo-500/5 hover:bg-indigo-500/10 border-indigo-500/20 text-slate-400';
+        if (dayNum > 14) weekBg = 'bg-amber-500/5 hover:bg-amber-500/10 border-amber-500/20 text-slate-400';
+        else if (dayNum > 7) weekBg = 'bg-sky-500/5 hover:bg-sky-500/10 border-sky-500/20 text-slate-400';
+
+        const btn = document.createElement('button');
+        btn.onclick = (function(d) {
+          return function() { toggleDay(d); };
+        })(dayNum);
+
+        if (isCompleted) {
+          btn.className = "aspect-square flex flex-col items-center justify-center rounded-xl border text-xs font-bold transition-all relative cursor-pointer bg-amber-505 bg-amber-500 border-amber-400 text-slate-950 shadow-md shadow-amber-500/10 scale-95";
+          btn.innerHTML = `
+            <span>D${dayNum}</span>
+            <div class="absolute top-0.5 right-0.5 bg-slate-900 text-amber-400 rounded-full p-0.5 text-[8px]">
+              <svg class="w-2 h-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+            </div>
+          `;
+        } else {
+          btn.className = `aspect-square flex flex-col items-center justify-center rounded-xl border text-xs font-bold transition-all relative cursor-pointer ${weekBg}`;
+          btn.innerHTML = `<span>D${dayNum}</span>`;
+        }
+
+        container.appendChild(btn);
+      }
+
+      // Update counter
+      document.getElementById('grid-counter').textContent = completedDays.length;
+    };
+
+    window.toggleDay = function(day) {
+      if (completedDays.includes(day)) {
+        completedDays = completedDays.filter(d => d !== day);
+      } else {
+        completedDays.push(day);
+        completedDays.sort((a,b) => a - b);
+      }
+      
+      // Save state to localStorage
+      localStorage.setItem(SECURE_STORAGE_KEY_DAYS, JSON.stringify(completedDays));
+      renderDaysGrid();
+    };
+
+    window.saveNotesState = function(text) {
+      localStorage.setItem(SECURE_STORAGE_KEY_NOTES, text);
+    };
+
+    window.resetRitualGrid = function() {
+      if (confirm("Tem certeza de que deseja apagar todo o progresso do seu calendário de 21 dias?")) {
+        completedDays = [];
+        localStorage.setItem(SECURE_STORAGE_KEY_DAYS, JSON.stringify(completedDays));
+        renderDaysGrid();
+      }
+    };
+
+  </script>
+</body>
+</html>
